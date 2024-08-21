@@ -1,0 +1,13 @@
+services:
+  database:
+    image: mysql
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=golang
+      - MYSQL_DATABASE=devbook
+      - MYSQL_USER=golang
+      - MYSQL_PASSWORD=golang
+    volumes:
+      - go_api_data:/var/lib/data/
+volumes:
+  go_api_data:
