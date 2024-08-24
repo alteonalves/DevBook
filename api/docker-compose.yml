@@ -9,5 +9,7 @@ services:
       - MYSQL_PASSWORD=golang
     volumes:
       - go_api_data:/var/lib/data/
+    ports:
+      - 3306:3306
 volumes:
   go_api_data:
